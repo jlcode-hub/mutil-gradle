@@ -1,0 +1,10 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation project(':mutil-api')
+    implementation project(':mutil-entity')
+    implementation project(':mutil-dao')
+    implementation 'org.springframework:spring-context'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+}

@@ -1,0 +1,6 @@
+
+dependencies {
+    implementation project(':mutil-entity')
+    implementation project(':mutil-service')
+    implementation 'org.springframework:spring-webmvc'
+}

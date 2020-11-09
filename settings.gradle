@@ -1,0 +1,8 @@
+rootProject.name = 'mutil-gradle'
+include 'mutil-api'
+include 'mutil-service'
+include 'mutil-dao'
+include 'mutil-entity'
+include 'mutil-controller'
+include 'mutil-starter'
+

@@ -1,0 +1,35 @@
+// maven发布插件
+apply plugin: 'maven-publish'
+
+dependencies {
+
+}
+
+
+// 源码
+task sourceJar(type: Jar) {
+    from sourceSets.main.java
+}
+
+publishing {
+    publications {
+        publishJars(MavenPublication) {
+            from components.java
+            // 发布源码
+            artifact sourceJar {
+                classifier "sources"
+            }
+        }
+    }
+    // 仓库信息
+    repositories {
+        maven {
+            name = 'snapshot'
+            url = "https://xxxxxxxx.xxx.xxx/nexus/content/repositories/snapshots/"
+            credentials {
+                username 'xxxxxx'
+                password 'xxxxxx'
+            }
+        }
+    }
+}
